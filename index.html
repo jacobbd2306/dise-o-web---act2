@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de HTML y Compatibilidad</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        section { margin-bottom: 30px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TEXTO: Título, subtítulos, párrafos y palabras resaltadas -->
+    <header>
+        <h1>Diseño Web: Práctica de Etiquetas Básicas</h1>
+        <p> Hola, bienvenido a la página web de prueba para verificar la <strong>compatibilidad entre navegadores</strong> y la estructura de un documento HTML.</p>
+    </header>
+
+    <main>
+        <!-- 2. VÍNCULOS: Enlace a sección interna y enlace a otra página -->
+        <section id="inicio">
+            <h2>Navegación y Vínculos</h2>
+            <p>Ir a la <a href="#seccion-tabla">Sección de la Tabla de Datos</a> (Enlace interno).</p>
+            <p>Visitar sitio web externo: <a href="https://www.google.com" target="_blank">Google</a> (Enlace externo).</p>
+        </section>
+
+        <!-- 3. LISTAS: Ordenada y No Ordenada -->
+        <section>
+            <h2>Listas de Ejemplo</h2>
+            <h3>Navegadores Evaluados (Lista Ordenada)</h3>
+            <ol>
+                <li>Google Chrome</li>
+                <li>Microsoft Edge / Mozilla Firefox</li>
+            </ol>
+
+            <h3>Elementos Verificados (Lista No Ordenada)</h3>
+            <ul>
+                <li>Visualización de tablas</li>
+                <li>Carga de objetos PDF</li>
+                <li>Ejecución de JavaScript</li>
+            </ul>
+        </section>
+
+        <!-- 4. TABLA: Encabezados y al menos 3 filas -->
+        <section id="seccion-tabla">
+            <h2>Tabla de Resultados de Pruebas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Estado Chrome</th>
+                        <th>Estado Edge/Firefox</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Etiquetas de Texto</td>
+                        <td>Correcto</td>
+                        <td>Correcto</td>
+                    </tr>
+                    <tr>
+                        <td>Objeto PDF (`<object>`)</td>
+                        <td>Correcto</td>
+                        <td>Correcto</td>
+                    </tr>
+                    <tr>
+                        <td>Botón de JavaScript</td>
+                        <td>Funcional</td>
+                        <td>Funcional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 5. OBJETO INCRUSTADO: PDF mediante etiqueta <object> -->
+        <section>
+            <h2>Documento Incrustado (PDF)</h2>
+            <p>A continuación se muestra un documento PDF incrustado directamente en la página:</p>
+            <object data="documento.pdf" type="application/pdf" width="100%" height="500px">
+                <p>Si tu navegador no soporta la visualización de PDF. Puedes <a href="documento.pdf">descargar el archivo aquí</a>.</p>
+            </object>
+        </section>
+
+        <!-- 6. APLICACIÓN SENCILLA: Botón con mensaje JavaScript -->
+        <section>
+            <h2>Interacción con JavaScript</h2>
+            <p>Haz clic en el siguiente botón para probar la ejecución de script:</p>
+            <button onclick="mostrarMensaje()">Probar Interacción</button>
+        </section>
+    </main>
+
+    <script>
+        function mostrarMensaje() {
+            alert('¡Hola! El script en JavaScript funciona correctamente en este navegador.');
+        }
+    </script>
+
+</body>
+</html>
